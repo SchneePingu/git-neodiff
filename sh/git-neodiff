@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+if ! command -v neodiff &> /dev/null
+then
+  git diff "$@"
+else
+  git diff "$@" --color=never | neodiff
+fi
