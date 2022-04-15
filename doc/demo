@@ -5,15 +5,15 @@ Date:   Sun Mar 20 13:39:21 2022 +0100
     add tools for debugging java code
 
 diff --git a/src/FileA.txt b/src/FileA.txt
-new
+new file
 @@ -1,1 +1,1 @@
 +This file was added.
 diff --git a/src/FileB.txt b/src/FileB.txt
-deleted
+deleted file
 @@ -1,1 +1,1 @@
 -This file was deleted.
 diff --git a/src/FileC.txt b/src/FileD.txt
-rename
+rename file
 @@ -1,4 +1,4 @@
  Beginning.
 -This line was deleted.
