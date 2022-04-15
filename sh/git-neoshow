@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+if ! command -v neodiff &> /dev/null
+then
+  git show "$@"
+else
+  git show "$@" --color=never | neodiff
+fi
