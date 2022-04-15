@@ -1,4 +1,4 @@
-name:                git-neodiff
+name:                neodiff
 version:             0.1.0.0
 github:              "SchneePingu/git-neodiff"
 license:             BSD3
@@ -22,7 +22,7 @@ library:
   source-dirs: src
 
 executables:
-  git-neodiff:
+  neodiff:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -30,4 +30,4 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - git-neodiff
+    - neodiff
