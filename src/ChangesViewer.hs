@@ -12,9 +12,13 @@ import ChangesData
 
 viewChanges :: Changes -> IO ()
 viewChanges (Changes header fileChanges) = do
-    let changes =
+    let separator =
+          if   header == []
+          then view ""
+          else newline
+        changes =
           viewHeader header ++
-          newline ++
+          separator ++
           viewFileChanges fileChanges
     printText changes
 
