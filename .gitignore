@@ -1,4 +1,4 @@
 .stack-work/
 *~
 stack.yaml.lock
-git-neodiff.cabal
+*.cabal
