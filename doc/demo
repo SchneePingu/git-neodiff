@@ -1,0 +1,31 @@
+commit 3d4f650c450ec1412091282bb94a6779fbb68cd9
+Author: SchneePingu <>
+Date:   Sun Mar 20 13:39:21 2022 +0100
+
+    add tools for debugging java code
+
+diff --git a/src/FileA.txt b/src/FileA.txt
+new
+@@ -1,1 +1,1 @@
++This file was added.
+diff --git a/src/FileB.txt b/src/FileB.txt
+deleted
+@@ -1,1 +1,1 @@
+-This file was deleted.
+diff --git a/src/FileC.txt b/src/FileD.txt
+rename
+@@ -1,4 +1,4 @@
+ Beginning.
+-This line was deleted.
++This line was added.
+ End.
+diff --git a/src/FileE.txt b/src/FileE.txt
+@@ -1,4 +1,4 @@
+ Beginning.
++This line was added.
+ End.
+diff --git a/src/FileF.txt b/src/FileF.txt
+@@ -1,4 +1,4 @@
+ Beginning.
+-This line was deleted.
+ End.

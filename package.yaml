@@ -1,0 +1,33 @@
+name:                git-neodiff
+version:             0.1.0.0
+github:              "githubuser/git-neodiff"
+license:             BSD3
+author:              "SchneePingu"
+copyright:           "2022 SchneePingu"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            A command-line tool to format the stdout of git-diff.
+description:         Please see the README on GitHub at <https://github.com/SchneePingu/git-neodiff#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- regex-tdfa
+- safe-coloured-text
+- text
+
+library:
+  source-dirs: src
+
+executables:
+  git-neodiff:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - git-neodiff
