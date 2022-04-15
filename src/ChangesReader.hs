@@ -7,13 +7,12 @@ import LineData
 import LineReader
 import FileChangeData
 import FileChangesReader
+import ChangesData
 
 
-readChanges :: IO [FileChange]
+readChanges :: IO Changes
 readChanges = do
     allLines <- readLines
-    return $ readFileChanges $ discardHeader allLines
-
-
-discardHeader :: [Line] -> [Line]
-discardHeader = dropWhile (not . isBeginningOfFileChanges)
+    let (header, body) = break isBeginningOfFileChanges allLines
+        fileChanges = readFileChanges body
+    return $ Changes header fileChanges

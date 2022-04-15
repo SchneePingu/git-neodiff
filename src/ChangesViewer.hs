@@ -7,11 +7,17 @@ import Data.List (intersperse)
 import Text
 import FileChangeData
 import FileChangesViewer
+import ChangesData
 
 
-viewChanges :: [FileChange] -> IO ()
-viewChanges fileChanges =
-    printText $
-    concat $ 
-    intersperse newline $
-    map viewFileChange fileChanges
+viewChanges :: Changes -> IO ()
+viewChanges (Changes header fileChanges) = do
+    let changes =
+          viewHeader header ++
+          newline ++
+          viewFileChanges fileChanges
+    printText changes
+
+
+viewHeader :: Header -> Text
+viewHeader = concat . intersperse newline . map view

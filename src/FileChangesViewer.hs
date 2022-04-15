@@ -1,12 +1,17 @@
 module FileChangesViewer
-( viewFileChange
+( viewFileChanges
 ) where
 
 
+import Data.List (intersperse)
 import LineChangeData
 import FileChangeData
 import LineChangesViewer
 import Text
+
+
+viewFileChanges :: [FileChange] -> Text
+viewFileChanges = concat . intersperse newline . map viewFileChange
 
 
 viewFileChange :: FileChange -> Text
