@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RELEASE_TAG="v0.2.0.0"
+RELEASE_TAG="v0.2.1.0"
 INSTALL_DIR="$HOME/.local/bin"
 
 if [ ! -d "$INSTALL_DIR" ]; then

@@ -23,7 +23,7 @@ git neoshow ...
 
 The following command will install `neodiff`, `git-neodiff` and `git-neoshow` to `~/.local/bin`. Please make sure this directory is covered by your `PATH` variable!
 ```
-curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.0.0/install.sh | bash
+curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.1.0/install.sh | bash
 ```
 
 ## Example
