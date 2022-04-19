@@ -8,18 +8,23 @@
 
 ## What is it?
 
-`git-neodiff` is a command-line tool to format the output of [git-diff](https://git-scm.com/docs/git-diff). It is used like this:
+`git-neodiff` is a set of command-line tools to format the output of [git-diff](https://git-scm.com/docs/git-diff) and [git-show](https://git-scm.com/docs/git-show). It consists of the wrappers `git-neodiff` and `git-neoshow`, replacing `git-diff` and `git-show`, and the parser `neodiff`, which formats the output.
+To use it, just type `git neodiff` instead of `git diff` and `git neoshow` insead of `git show`. 
+
 ```
-git diff ... | git-neodiff
+git neodiff ...
+```
+
+```
+git neoshow ...
 ```
 
 ## Installation
 
-#### Download precompiled binary (recommended)
-A precompiled binary of `git-neodiff` for Linux can be downloaded from the [release](https://github.com/SchneePingu/git-neodiff/releases/latest) page.
-
-#### Build source code with stack (advanced)
-`git-neodiff` can be installed with [stack](https://docs.haskellstack.org/en/stable/README/). If you already have `stack` installed, download the source code from the [release](https://github.com/SchneePingu/git-neodiff/releases/latest) page and run `stack install`.
+The following command will install `neodiff`, `git-neodiff` and `git-neoshow` to `~/.local/bin`. Please make sure this directory is covered by your `PATH` variable!
+```
+curl -s https://github.com/SchneePingu/git-neodiff/releases/download/v0.1.0.0/install.sh | bash
+```
 
 ## Example
 
