@@ -4,6 +4,8 @@
 ### Added
 - Show header
 - Rename executable
+- Git wrappers
+- Installation script
 
 ## [0.1.0.0] - 15. 04. 2022
 ### Added
