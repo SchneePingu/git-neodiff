@@ -1,5 +1,5 @@
 <p align="left">
-    <a href="https://img.shields.io/badge/git--neodiff-v0.1-purple.svg"><img src="https://img.shields.io/badge/git--neodiff-v0.1-blue.svg" alt="git-neodiff"></a>
+    <a href="https://img.shields.io/badge/git--neodiff-v0.2-purple.svg"><img src="https://img.shields.io/badge/git--neodiff-v0.2-blue.svg" alt="git-neodiff"></a>
     <a href="https://img.shields.io/badge/license-BSD3-orange.svg"><img src="https://img.shields.io/badge/license-BSD3-orange.svg" alt="license"></a>
     <a href="https://img.shields.io/badge/Haskell-2010-purple.svg"><img src="https://img.shields.io/badge/Haskell-2010-purple.svg" alt="vim"></a>
 </p>
@@ -19,11 +19,11 @@ git neodiff ...
 git neoshow ...
 ```
 
-## Installation
+## Installation (Linux)
 
 The following command will install `neodiff`, `git-neodiff` and `git-neoshow` to `~/.local/bin`. Please make sure this directory is covered by your `PATH` variable!
 ```
-curl -s https://github.com/SchneePingu/git-neodiff/releases/download/v0.1.0.0/install.sh | bash
+curl -s https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.0.0/install.sh | bash
 ```
 
 ## Example

@@ -1,6 +1,8 @@
 # Changelog for git-neodiff
 
 ## Unreleased changes
+
+## [0.2.0.0] - 19. 04. 2022
 ### Added
 - Show header
 - Rename executable
