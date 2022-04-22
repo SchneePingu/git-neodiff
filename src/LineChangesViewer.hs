@@ -78,6 +78,7 @@ showRightLineNumber _ width lineNumber = showLineNumber width lineNumber
 
 
 showLineNumberPlaceholder :: ColumnWidth -> String
+showLineNumberPlaceholder 0 = ""
 showLineNumberPlaceholder columnWidth = replicate (columnWidth + 1) ' '
 
 
