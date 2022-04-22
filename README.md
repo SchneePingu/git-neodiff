@@ -19,6 +19,10 @@ git neodiff ...
 git neoshow ...
 ```
 
+## Example
+
+<p align="left"><img src="/doc/demo.png" alt="demo" width="250"></p>
+
 ## Installation (Linux)
 
 For installation, it is recommend to use the provided installation script, which makes use of a precompiled binary of `neodiff`. If you experience issues with the binary, due to a different computer architecture or even operating system, it is also possible to install it from source code. However, this requires [stack](https://docs.haskellstack.org/en/stable/README/) to be installed.
@@ -51,7 +55,3 @@ chmod +x ~/.local/bin/git-neodiff
 cp sh/git-neoshow ~/.local/bin
 chmod+x ~/.local/bin/git-neoshow
 ```
-
-## Example
-
-<p align="left"><img src="/doc/demo.png" alt="demo" width="250"></p>
