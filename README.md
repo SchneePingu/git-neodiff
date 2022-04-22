@@ -21,9 +21,35 @@ git neoshow ...
 
 ## Installation (Linux)
 
+For installation, it is recommend to use the provided installation script, which makes use of a precompiled binary of `neodiff`. If you experience issues with the binary, due to a different computer architecture or even operating system, it is also possible to install it from source code. However, this requires [stack](https://docs.haskellstack.org/en/stable/README/) to be installed.
+
+### Installation script (recommended)
+
 The following command will install `neodiff`, `git-neodiff` and `git-neoshow` to `~/.local/bin`. Please make sure this directory is covered by your `PATH` variable!
 ```
 curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.1.0/install.sh | bash
+```
+
+### Installation from source code (advanced)
+
+To install from source code, first clone the repository, change directory to the root of the repository and checkout the release commit.
+
+```
+git checkout v0.2.1.0
+```
+
+`neodiff` may then be installed by means of [stack](https://docs.haskellstack.org/en/stable/README/). To install it, run
+```
+stack install --local-bin-path ~/.local/bin
+```
+
+Both `git-neodiff` and `git-neoshow` are installed by copying the corresponding scripts.
+```
+cp sh/git-neodiff ~/.local/bin
+chmod +x ~/.local/bin/git-neodiff
+
+cp sh/git-neoshow ~/.local/bin
+chmod+x ~/.local/bin/git-neoshow
 ```
 
 ## Example
