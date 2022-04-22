@@ -25,7 +25,7 @@ git neoshow ...
 
 ## Installation (Linux)
 
-For installation, it is recommend to use the provided installation script, which makes use of a precompiled binary of `neodiff`. If you experience issues with the binary, due to a different computer architecture or even operating system, it is also possible to install it from source code. However, this requires [stack](https://docs.haskellstack.org/en/stable/README/) to be installed.
+For installation, it is recommend to use the provided [installation script](./README.md#installation-script-recommended), which makes use of a precompiled binary of `neodiff`. If you experience issues with the binary, due to a different computer architecture or even operating system, it is also possible to [install it from source code](./README.md#installation-from-source-code-advanced). However, this requires [stack](https://docs.haskellstack.org/en/stable/README/) to be installed.
 
 ### Installation script (recommended)
 
