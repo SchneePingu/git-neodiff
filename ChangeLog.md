@@ -1,6 +1,8 @@
 # Changelog for git-neodiff
 
 ## Unreleased changes
+
+## [0.2.2.0] - 22. 04. 2022
 ### Fixed
 - Hide irrelevant line numbers
 

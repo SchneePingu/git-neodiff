@@ -31,7 +31,7 @@ For installation, it is recommend to use the provided [installation script](./RE
 
 The following command will install `neodiff`, `git-neodiff` and `git-neoshow` to `~/.local/bin`. Please make sure this directory is covered by your `PATH` variable!
 ```
-curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.1.0/install.sh | bash
+curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.2.0/install.sh | bash
 ```
 
 ### Installation from source code (advanced)
@@ -39,7 +39,7 @@ curl -Ls https://github.com/SchneePingu/git-neodiff/releases/download/v0.2.1.0/i
 To install from source code, first clone the repository, change directory to the root of the repository and checkout the release commit.
 
 ```
-git checkout v0.2.1.0
+git checkout v0.2.2.0
 ```
 
 `neodiff` may then be installed by means of [stack](https://docs.haskellstack.org/en/stable/README/). To install it, run
