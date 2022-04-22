@@ -59,12 +59,26 @@ viewTypeOfLineChange UnchangedLine = view " "
 
 viewLineNumbers :: TypeOfLineChange -> ColumnWidths -> LineNumbers -> Text
 viewLineNumbers typeOfLineChange widths@(leftWidth, rightWidth) (oldNumber, newNumber) =
-  let leftLineNumber = showLineNumber leftWidth oldNumber
-      rightLineNumber = showLineNumber rightWidth newNumber
+  let leftLineNumber = showLeftLineNumber typeOfLineChange leftWidth oldNumber
+      rightLineNumber = showRightLineNumber typeOfLineChange rightWidth newNumber
       columnSeparator = getColumnSeparator widths
   in  view leftLineNumber ++
       view columnSeparator ++
       color yellow rightLineNumber
+
+
+showLeftLineNumber :: TypeOfLineChange -> ColumnWidth -> LineNumber -> String
+showLeftLineNumber AddedLine width _ = showLineNumberPlaceholder width
+showLeftLineNumber _ width lineNumber = showLineNumber width lineNumber
+
+
+showRightLineNumber :: TypeOfLineChange -> ColumnWidth -> LineNumber -> String
+showRightLineNumber DeletedLine width _ = showLineNumberPlaceholder width
+showRightLineNumber _ width lineNumber = showLineNumber width lineNumber
+
+
+showLineNumberPlaceholder :: ColumnWidth -> String
+showLineNumberPlaceholder columnWidth = replicate (columnWidth + 1) ' '
 
 
 showLineNumber :: ColumnWidth -> LineNumber -> String
