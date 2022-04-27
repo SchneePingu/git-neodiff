@@ -13,7 +13,7 @@ synopsis:            A command-line tool to format the stdout of git-diff.
 description:         Please see the README on GitHub at <https://github.com/SchneePingu/git-neodiff#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+- base == 4.14.1.0
 - regex-tdfa
 - safe-coloured-text
 - text
