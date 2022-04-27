@@ -17,6 +17,8 @@ dependencies:
 - regex-tdfa
 - safe-coloured-text
 - text
+- darcs
+- bytestring
 
 library:
   source-dirs: src
