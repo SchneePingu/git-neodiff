@@ -3,7 +3,7 @@ module FileChangesViewer
 ) where
 
 
-import Data.List (intersperse)
+import Data.List (intercalate)
 import LineChangeData
 import FileChangeData
 import LineChangesViewer
@@ -11,7 +11,7 @@ import Text
 
 
 viewFileChanges :: [FileChange] -> Text
-viewFileChanges = concat . intersperse newline . map viewFileChange
+viewFileChanges = intercalate newline . map viewFileChange
 
 
 viewFileChange :: FileChange -> Text

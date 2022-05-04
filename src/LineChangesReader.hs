@@ -65,6 +65,6 @@ isBeginningOfLineChanges line =
 
 readLineNumbers :: Line -> LineNumbers
 readLineNumbers line =
-  let (oldLineNumberAsString : newLineNumberAsString : []) =
+  let [oldLineNumberAsString, newLineNumberAsString] =
         getMatchingGroups line regexForBeginningOfLineChanges
   in  (read oldLineNumberAsString, read newLineNumberAsString)

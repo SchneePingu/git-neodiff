@@ -47,6 +47,6 @@ isBeginningOfFileChanges line =
 
 readFileNames :: Line -> FileNames
 readFileNames line =
-  let (oldFileName : newFileName : []) =
+  let [oldFileName, newFileName] =
         getMatchingGroups line regexForBeginningOfFileChanges
   in  (oldFileName, newFileName)

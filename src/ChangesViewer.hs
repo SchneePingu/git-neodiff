@@ -3,7 +3,7 @@ module ChangesViewer
 ) where
 
 
-import Data.List (intersperse)
+import Data.List (intercalate)
 import Text
 import FileChangeData
 import FileChangesViewer
@@ -13,7 +13,7 @@ import ChangesData
 viewChanges :: Changes -> IO ()
 viewChanges (Changes header fileChanges) = do
     let separator =
-          if   header == []
+          if   null header
           then view ""
           else newline
         changes =
@@ -24,4 +24,4 @@ viewChanges (Changes header fileChanges) = do
 
 
 viewHeader :: Header -> Text
-viewHeader = concat . intersperse newline . map view
+viewHeader = intercalate newline . map view

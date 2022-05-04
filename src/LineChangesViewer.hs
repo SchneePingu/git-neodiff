@@ -3,7 +3,7 @@ module LineChangesViewer
 ) where
 
 
-import Data.List (intersperse, unzip)
+import Data.List (intercalate, unzip)
 import Data.Bifunctor (bimap)
 import Text
 import LineChangeData
@@ -16,8 +16,7 @@ type ColumnWidth = Int
 viewLineChanges :: [[LineChange]] -> Text
 viewLineChanges lineChanges =
   let columnWidths = getColumnWidths lineChanges
-  in  concat $
-      intersperse newline $
+  in  intercalate newline $
       map (concatMap (viewLineChange columnWidths)) lineChanges
 
 
@@ -89,7 +88,7 @@ showLineNumber columnWidth lineNumber =
       lineNumberWidth = length lineNumberAsString
       numberOfSpaces = max 0 (columnWidth - lineNumberWidth)
       leadingSpaces = replicate numberOfSpaces ' '
-  in  (take columnWidth $ leadingSpaces ++ lineNumberAsString) ++ ":"
+  in  take columnWidth ( leadingSpaces ++ lineNumberAsString) ++ ":"
 
 
 getColumnSeparator :: ColumnWidths -> String
