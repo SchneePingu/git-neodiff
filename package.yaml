@@ -31,3 +31,15 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - neodiff
+
+tests:
+  viewerTests:
+    main:                Main.hs
+    source-dirs:         test/viewerTests
+    other-modules:
+    - TestLineChangesViewer
+    dependencies:
+    - neodiff
+    - test-framework
+    - test-framework-hunit
+    - HUnit

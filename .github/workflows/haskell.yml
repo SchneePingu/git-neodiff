@@ -10,8 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-haskell@v1
+    - name: Setup
+      run: |
+        ./setup.sh
     - name: Build
       run: stack build
+    - name: Test
+      run: |
+        ./test/runTests.sh
     - name: Linting
       run: |
         curl -sSL https://raw.github.com/ndmitchell/hlint/master/misc/run.sh | sh -s .
