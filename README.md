@@ -2,6 +2,7 @@
     <a href="https://img.shields.io/badge/git--neodiff-v0.2-purple.svg"><img src="https://img.shields.io/badge/git--neodiff-v0.2-blue.svg" alt="git-neodiff"></a>
     <a href="https://img.shields.io/badge/license-BSD3-orange.svg"><img src="https://img.shields.io/badge/license-BSD3-orange.svg" alt="license"></a>
     <a href="https://img.shields.io/badge/Haskell-2010-purple.svg"><img src="https://img.shields.io/badge/Haskell-2010-purple.svg" alt="vim"></a>
+    <a href="https://github.com/SchneePingu/git-neodiff/actions/workflows/haskell.yml/badge.svg"><img src="https://github.com/SchneePingu/git-neodiff/actions/workflows/haskell.yml/badge.svg" alt="build"></a>
 </p>
 
 # git-neodiff
