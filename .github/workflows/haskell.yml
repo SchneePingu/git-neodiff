@@ -1,0 +1,17 @@
+name: git-neodiff CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-haskell@v1
+    - name: Build
+      run: stack build
+    - name: Linting
+      run: |
+        curl -sSL https://raw.github.com/ndmitchell/hlint/master/misc/run.sh | sh -s .
