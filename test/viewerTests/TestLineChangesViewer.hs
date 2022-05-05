@@ -68,3 +68,34 @@ testTextForUnchangedLine =
         space ++
         view "unchanged" ++
         newline
+
+testTextForMultipleLineChanges =
+    testCase "Text is shown for unchanged line."
+    $ viewLineChanges [[LineChange UnchangedLine (1, 2) "unchanged", LineChange DeletedLine (3, 0) "deleted", LineChange AddedLine (0, 4) "added"]]
+    @?= expectedText
+    where
+      expectedText =
+        view " " ++
+        space ++
+        view "1:" ++
+        view " " ++
+        color yellow "2:" ++
+        space ++
+        view "unchanged" ++
+        newline ++
+        color red "-" ++
+        space ++
+        view "3:" ++
+        view " " ++
+        color yellow "  " ++
+        space ++
+        color red "deleted" ++
+        newline ++
+        color green "+" ++
+        space ++
+        view "  " ++
+        view " " ++
+        color yellow "4:" ++
+        space ++
+        color green "added" ++
+        newline
