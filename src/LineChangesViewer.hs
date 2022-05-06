@@ -82,7 +82,6 @@ showLineNumberPlaceholder columnWidth = replicate (columnWidth + 1) ' '
 
 
 showLineNumber :: ColumnWidth -> LineNumber -> String
-showLineNumber 0 _ = ""
 showLineNumber columnWidth lineNumber =
   let lineNumberAsString = show lineNumber
       lineNumberWidth = length lineNumberAsString
