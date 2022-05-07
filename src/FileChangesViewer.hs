@@ -68,5 +68,4 @@ viewNumberOfChangesOfType typeOfLineChange numberOfChanges =
   in  case typeOfLineChange of
     AddedLine -> color green $ "+" ++ numberOfChangesString
     DeletedLine -> color red $ "-" ++ numberOfChangesString
-    UnchangedLine -> view numberOfChangesString
 
