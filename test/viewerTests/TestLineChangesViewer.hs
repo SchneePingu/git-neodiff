@@ -4,7 +4,6 @@ import Test.HUnit
 import Test.Framework
 import Test.Framework.Providers.HUnit
 import LineChangesViewer
-import LineChangeData
 import Text
 import Data
 
@@ -12,7 +11,7 @@ import Data
 unitTests = testGroup "TestLineChangesViewer" testCases
 
 testCases =
-    [ testNoTextForNoLineChangesEmpty
+    [ testNoTextForNoLineChanges
     , testTextForAddedLine
     , testTextForDeletedLine
     , testTextForUnchangedLine
@@ -21,13 +20,10 @@ testCases =
     , testTextForPaddingOfLineNumbers
     ]
 
-
-
-testNoTextForNoLineChangesEmpty =
+testNoTextForNoLineChanges =
     testCase "No text is shown for no line changes."
     $ viewLineChanges [[]]
     @?= []
-
 
 testTextForAddedLine =
     testCase "Text is shown for added line."
@@ -38,7 +34,6 @@ testTextForDeletedLine =
     testCase "Text is shown for deleted line."
     $ viewLineChanges [[deletedLine]]
     @?= textForDeletedLine
-
 
 testTextForUnchangedLine =
     testCase "Text is shown for unchanged line."
