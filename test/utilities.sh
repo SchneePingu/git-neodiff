@@ -18,5 +18,5 @@ runTests() {
     testTarget=$1
 
     cd $SCRIPTPATH/$testTarget
-    stack --silent test --coverage neodiff:test:$testTarget && stack hpc report neodiff:test:$testTarget 2>&1 | runHpcThreshold
+    stack test --coverage neodiff:test:$testTarget && stack hpc report neodiff:test:$testTarget 2>&1 | runHpcThreshold
 }
