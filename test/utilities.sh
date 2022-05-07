@@ -4,10 +4,10 @@ SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 runHpcThreshold() {
     if hash hpc-threshold 2>/dev/null; then
-        tee >(hpc-threshold "$@")
+        hpc-threshold "$@"
     else
         if [ -x "$SCRIPTPATH/../bin/hpc-threshold" ]; then
-            tee >($SCRIPTPATH/../bin/hpc-threshold "$@")
+            $SCRIPTPATH/../bin/hpc-threshold "$@"
         else
             2>&2
         fi
