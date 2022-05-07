@@ -7,9 +7,6 @@ module LineChangeData
 ) where
 
 
-import LineData
-
-
 type LineNumbers = (LineNumber, LineNumber)
 type LineNumber = Int
 type Content = String
