@@ -1,6 +1,7 @@
 module Data where
 
 import LineChangeData
+import FileChangeData
 import Text
 
 addedLine = LineChange AddedLine (0, 1) "added"
@@ -67,7 +68,62 @@ textForSectionOfLineChanges =
   view "unchanged" ++
   newline
 
-
 unchangedLineWithLineNumbers :: LineNumbers -> LineChange
 unchangedLineWithLineNumbers lineNumbers =
   LineChange UnchangedLine lineNumbers "unchanged"
+
+oldFileName = "Old.txt"
+newFileName = "New.txt"
+
+getTextForFileChange :: String -> (Int, Int) -> Text
+getTextForFileChange typeOfFileChange (numberOfAddedLines, numberOfDeletedLines) =
+  color cyan "@ "  ++
+  color blue newFileName ++
+  newline ++
+  view "(" ++
+  view typeOfFileChange ++
+  view ": " ++
+  view oldFileName ++
+  view ")" ++
+  newline ++
+  view "[" ++
+  color green ("+" ++ show numberOfAddedLines) ++
+  view " | " ++
+  color red ("-" ++ show numberOfDeletedLines) ++
+  view "]" ++
+  newline
+
+addedFile = FileChange AddedFile (oldFileName, newFileName) [[addedLine]]
+
+textForAddedFile =
+  getTextForFileChange "added" (1, 0) ++
+  textForAddedLine
+
+deletedFile = FileChange DeletedFile (oldFileName, newFileName) [[deletedLine]]
+
+textForDeletedFile =
+  getTextForFileChange "deleted" (0, 1) ++
+  textForDeletedLine
+
+renamedFile = FileChange RenamedFile (oldFileName, newFileName) [[unchangedLine]]
+
+textForRenamedFile =
+  getTextForFileChange "renamed" (0, 0) ++
+  textForUnchangedLine
+
+editedFile = FileChange EditedFile (oldFileName, newFileName) [sectionOfLineChanges]
+
+textForEditedFile =
+  getTextForFileChange "edited" (1, 1) ++
+  textForSectionOfLineChanges
+
+multipleChangedFiles = [addedFile, deletedFile, renamedFile, editedFile]
+
+textForMultipleChangedFiles =
+  textForAddedFile ++
+  newline ++
+  textForDeletedFile ++
+  newline ++
+  textForRenamedFile ++
+  newline ++
+  textForEditedFile
