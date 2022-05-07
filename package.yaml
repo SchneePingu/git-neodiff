@@ -38,6 +38,8 @@ tests:
     source-dirs:         test/viewerTests
     other-modules:
     - TestLineChangesViewer
+    - TestFileChangesViewer
+    - Data
     dependencies:
     - neodiff
     - test-framework
